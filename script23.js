@@ -1,4 +1,4 @@
-let arr = [22, 62, -28, 12, '2', true, 'qweqwe', 5, -7, 9, null];
+let arr = [false, 22, 62, -28, 12, '2', true, 'qweqwe', 5, -7, 9, null];
 console.log(arr);
 
 // sum number
@@ -16,8 +16,12 @@ console.log(`Total: ${sum}`);
 let min = 0;
 let max = 0;
 for (let i = 0; i < arr.length; i++) {
-  arr[i] < min ? (min = arr[i]) : (min = min);
-  arr[i] > max ? (max = arr[i]) : (max = max);
+  if (typeof arr[i] !== 'number') {
+    continue;
+  } else {
+    arr[i] < min ? (min = arr[i]) : (min = min);
+    arr[i] > max ? (max = arr[i]) : (max = max);
+  }
 }
 console.log(`Lowest number: ${min}`);
 console.log(`Highest number: ${max}`);
