@@ -13,24 +13,30 @@ for (let i = 0; i < arr.length; i++) {
 console.log(`Total: ${sum}`);
 
 // find min-max
-let min = 0;
-let max = 0;
-for (let i = 0; i < arr.length; i++) {
-  if (typeof arr[i] !== 'number') {
-    continue;
-  } else {
-    arr[i] < min ? (min = arr[i]) : (min = min);
-    arr[i] > max ? (max = arr[i]) : (max = max);
-  }
-}
-console.log(`Lowest number: ${min}`);
-console.log(`Highest number: ${max}`);
+alert(
+  'Введіть в консолі для пошуку:\nМаксимального числа:\n max(arr); \nМінімального числа:\n min(arr);'
+);
+let minNumber = 0;
+let maxNumber = 0;
 
-// tree
-console.log('Half of tree:');
-let leaf = '#';
-let tree = '';
-for (let i = 0; i < 5; i++) {
-  tree = tree + leaf;
-  console.log(tree);
-}
+const max = function findMaxNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== 'number') {
+      continue;
+    } else {
+      arr[i] > maxNumber ? (maxNumber = arr[i]) : (maxNumber = maxNumber);
+    }
+  }
+  return console.log(`Highest number: ${maxNumber}`);
+};
+
+const min = function findMinNumber(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== 'number') {
+      continue;
+    } else {
+      arr[i] < minNumber ? (minNumber = arr[i]) : (minNumber = minNumber);
+    }
+  }
+  return console.log(`Lowest number: ${minNumber}`);
+};
