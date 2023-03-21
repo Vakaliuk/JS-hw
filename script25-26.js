@@ -40,3 +40,33 @@ const calc = {
     alert(this.num1 * this.num2);
   },
 };
+
+// hw26 'Акумулятор'
+alert(
+  'Впишіть в консоль: const acc = new Accumulator(1); \n далі: acc.increment(); або acc.decrement();\nДоповненний акумулятор: const acc2 = new CancelableAcc(10);\n далі: попередні методи + acc2.clear();'
+);
+
+function Accumulator(n) {
+  this.number = n;
+
+  this.increment = function () {
+    this.number++;
+    console.log(`${this.number}`);
+  };
+}
+
+Accumulator.prototype.decrement = function () {
+  this.number--;
+  console.log(`${this.number}`);
+};
+
+function CancelableAcc(n) {
+  Accumulator.call(this, n);
+
+  this.clear = function () {
+    this.number = n;
+    console.log(`${this.number}`);
+  };
+}
+
+CancelableAcc.prototype = Object.create(Accumulator.prototype);
