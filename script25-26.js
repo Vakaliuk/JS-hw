@@ -48,12 +48,12 @@ alert(
 
 function Accumulator(n) {
   this.number = n;
-
-  this.increment = function () {
-    this.number++;
-    console.log(`${this.number}`);
-  };
 }
+
+Accumulator.prototype.increment = function () {
+  this.number++;
+  console.log(`${this.number}`);
+};
 
 Accumulator.prototype.decrement = function () {
   this.number--;
