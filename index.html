@@ -6,6 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Homework</title>
   </head>
-  <body></body>
-  <script src="script25-26.js"></script>
+  <body>
+    <div class="container" style="width: 600px; margin: auto">
+      <div class="minmax" style="margin: auto; width: 300px">
+        <h2>Find minmax of the arr</h2>
+        <button
+          class="maxNum"
+          onclick="resultMax()"
+          style="
+            border-color: green;
+            border-radius: 4px;
+            border-width: 5px;
+            padding: 5px;
+          "
+        >
+          <strong> Find max number</strong>
+        </button>
+        <button
+          class="minNum"
+          onclick="resultMin()"
+          style="
+            border-color: red;
+            border-radius: 4px;
+            border-width: 5px;
+            padding: 5px;
+          "
+        >
+          <strong> Find min number</strong>
+        </button>
+      </div>
+
+      <div class="calc" style="margin: auto; width: 300px">
+        <h2>Calculate</h2>
+
+        <input id="num1" type="number" style="width: 50px; padding: 5px" />
+        <input id="num2" type="number" style="width: 50px; padding: 5px" />
+
+        <button
+          id="sumBtn"
+          style="border-radius: 4px; border-width: 1px; padding: 10px"
+        >
+          <strong>symm +</strong>
+        </button>
+
+        <button
+          id="subBtn"
+          style="border-radius: 4px; border-width: 1px; padding: 10px"
+        >
+          <strong>subtract -</strong>
+        </button>
+      </div>
+      <div class="calc" style="margin: auto; width: 300px">
+        <h1 class="titleResult">Result:</h1>
+      </div>
+    </div>
+  </body>
+  <script src="script27.js"></script>
 </html>
