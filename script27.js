@@ -4,6 +4,7 @@ titleResultRef.append(showResult);
 
 let num1;
 let num2;
+let result;
 function checkNum() {
   num1 = prompt('Введіть перше число');
   if (num1 === '') {
@@ -31,7 +32,7 @@ function checkNum() {
 
 function summ() {
   if (checkNum()) {
-    let result = Number(num1) + Number(num2);
+    result = Number(num1) + Number(num2);
 
     showResult.textContent = result;
     colorTextContent();
@@ -40,7 +41,7 @@ function summ() {
 
 function diff() {
   if (checkNum()) {
-    let result = num1 - num2;
+    result = num1 - num2;
 
     showResult.textContent = result;
     colorTextContent();
@@ -49,7 +50,7 @@ function diff() {
 
 function mult() {
   if (checkNum()) {
-    let result = num1 * num2;
+    result = num1 * num2;
 
     showResult.textContent = result;
     colorTextContent();
@@ -58,7 +59,7 @@ function mult() {
 
 function div() {
   if (checkNum()) {
-    let result = num1 / num2;
+    result = num1 / num2;
 
     showResult.textContent = result;
     colorTextContent();
@@ -96,19 +97,17 @@ const min = function findMinNumber(arr) {
 };
 
 const resultMax = function () {
-  showResult.textContent = max(arr);
+  result = max(arr);
 
+  showResult.textContent = result;
   colorTextContent();
-
-  titleResultRef.append(showResult);
 };
 
 const resultMin = function () {
-  showResult.textContent = min(arr);
+  result = min(arr);
 
+  showResult.textContent = result;
   colorTextContent();
-
-  titleResultRef.append(showResult);
 };
 
 // =================================
